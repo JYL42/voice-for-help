@@ -297,19 +297,22 @@ function loadCard() {
   document.getElementById("cardEnglishTitle").innerHTML = englishTitleMap[cardType];
   document.getElementById("cardEnglishBody").innerHTML = englishBodyMap[cardType].replace(/\n/g, "<br>");
 
-  const replayNative = document.getElementById("replay-native");
+      const replayNative = document.getElementById("replay-native");
   const replayEnglish = document.getElementById("replay-english");
   if (replayNative) replayNative.textContent = phrases.replay;
   if (replayEnglish) replayEnglish.textContent = englishLabels.replay;
 
   const audio = document.getElementById("cardAudio");
-  audio.src = `audio/${language.audioPrefix}_${cardType}.aiff`;
-  audio.play().catch(() => {
-    console.log("Autoplay blocked until user interacts.");
-  });
+  audio.src = `audio/${language.audioPrefix}_${cardType}.m4a`;
+  audio.load();
 }
 
 function playCurrentAudio() {
   const audio = document.getElementById("cardAudio");
-  audio.play();
+  if (!audio) return;
+
+  audio.currentTime = 0;
+  audio.play().catch(err => {
+    console.log("Audio play failed:", err);
+  });
 }
