@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice for Help</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <div class="topbar">
+      <button class="back-btn" onclick="goBackToLanguage()">
+        ⬅️
+      </button>
+    </div>
+
+    <div class="current-language"></div>
+
+    <button class="main-btn emergency-btn" onclick="openCard('emergency')">
+      <span id="label-emergency-native"></span><br>
+      <span id="label-emergency-english" class="subtext"></span>
+    </button>
+
+    <button class="action-btn" onclick="openCard('police')">
+      <span id="label-police-native"></span><br>
+      <span id="label-police-english" class="subtext"></span>
+    </button>
+
+    <button class="action-btn" onclick="openCard('ambulance')">
+      <span id="label-ambulance-native"></span><br>
+      <span id="label-ambulance-english" class="subtext"></span>
+    </button>
+
+    <button class="action-btn" onclick="openCard('fire')">
+      <span id="label-fire-native"></span><br>
+      <span id="label-fire-english" class="subtext"></span>
+    </button>
+
+    <button class="action-btn" onclick="openCard('call911')">
+      <span id="label-call911-native"></span><br>
+      <span id="label-call911-english" class="subtext"></span>
+    </button>
+
+    <button class="action-btn" onclick="openCard('language')">
+      <span id="label-language-native"></span><br>
+      <span id="label-language-english" class="subtext"></span>
+    </button>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
