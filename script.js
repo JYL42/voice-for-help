@@ -70,8 +70,7 @@ const nativePhrases = {
     language: "语言",
     ispeak: "我说中文",
     interpreter: "需要翻译",
-    noEnglish: "我不会英语",
-    replay: "再播一次"
+    noEnglish: "我不会英语"
   },
 
   cantonese: {
@@ -83,8 +82,7 @@ const nativePhrases = {
     language: "语言",
     ispeak: "我说广东话",
     interpreter: "需要翻译",
-    noEnglish: "我不会英语",
-    replay: "再播一次"
+    noEnglish: "我不会英语"
   },
 
   toishanese: {
@@ -96,8 +94,7 @@ const nativePhrases = {
     language: "语言",
     ispeak: "我说台山话",
     interpreter: "需要翻译",
-    noEnglish: "我不会英语",
-    replay: "再播一次"
+    noEnglish: "我不会英语"
   },
 
   spanish: {
@@ -109,8 +106,7 @@ const nativePhrases = {
     language: "Idioma",
     ispeak: "Hablo español",
     interpreter: "Necesito intérprete",
-    noEnglish: "No entiendo inglés",
-    replay: "Repetir"
+    noEnglish: "No entiendo inglés"
   },
 
   korean: {
@@ -122,8 +118,7 @@ const nativePhrases = {
     language: "언어",
     ispeak: "저는 한국어를 합니다",
     interpreter: "통역이 필요합니다",
-    noEnglish: "저는 영어를 못합니다",
-    replay: "다시 재생"
+    noEnglish: "저는 영어를 못합니다"
   },
 
   russian: {
@@ -135,8 +130,7 @@ const nativePhrases = {
     language: "Язык",
     ispeak: "Я говорю по-русски",
     interpreter: "Мне нужен переводчик",
-    noEnglish: "Я не понимаю английский",
-    replay: "Повторить"
+    noEnglish: "Я не понимаю английский"
   }
 };
 
@@ -146,8 +140,7 @@ const englishLabels = {
   ambulance: "Ambulance",
   fire: "Fire",
   call911: "Call 911 for me",
-  language: "Language",
-  replay: "Replay"
+  language: "Language"
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -297,10 +290,6 @@ function loadCard() {
   document.getElementById("cardEnglishTitle").innerHTML = englishTitleMap[cardType];
   document.getElementById("cardEnglishBody").innerHTML = englishBodyMap[cardType].replace(/\n/g, "<br>");
 
-      const replayNative = document.getElementById("replay-native");
-  const replayEnglish = document.getElementById("replay-english");
-  if (replayNative) replayNative.textContent = phrases.replay;
-  if (replayEnglish) replayEnglish.textContent = englishLabels.replay;
 
   const audio = document.getElementById("cardAudio");
   audio.src = `audio/${language.audioPrefix}_${cardType}.m4a`;
