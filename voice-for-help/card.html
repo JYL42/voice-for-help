@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice for Help</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="card-page">
+
+  <div class="card">
+
+    <button class="back-btn" onclick="history.back()">
+      ⬅️
+    </button>
+
+    <div id="cardNative" class="card-native"></div>
+
+    <div id="cardEnglishTitle" class="card-english-title"></div>
+
+    <div id="cardEnglishBody" class="card-english-body"></div>
+
+    <button class="replay-btn" onclick="playCurrentAudio()">
+      🔊 <span id="replay-native"></span>
+      <div id="replay-english" class="subtext"></div>
+    </button>
+
+    <audio id="cardAudio"></audio>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
