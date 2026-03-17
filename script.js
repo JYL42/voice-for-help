@@ -183,7 +183,7 @@ function selectLanguage(languageKey) {
   localStorage.setItem("languageEnglish", language.englishName);
   localStorage.setItem("languageNative", language.nativeShort);
   localStorage.setItem("audioPrefix", language.audioPrefix);
-  window.location.href = "menu.html";
+  window.location.href = "mode.html";
 }
 
 function playLanguageName(languageKey) {
